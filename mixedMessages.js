@@ -8,68 +8,83 @@ The exptectd output of this program is to generate a message to stutterers and t
 */
 
 
-const verbs = ['is', 'is not', 'can', 'cannot']
-
-// Choosing the first verb
-
-//let indx = Math.floor(Math.random() * verbs1.length)
-// console.log(indx);
-
-let verb = verbs[Math.floor(Math.random() * verbs.length)]
-// console.log(verb);
-
-
-// Define different situations for each verb
-// Does this create scope pollution?
-const situationIs = [
-    'a speech fluency disorder',
-    'assumed to be %1 common of the population',
-    'different for every stutterer',
-    'based on yet to be discovered neurophysioloical reasons'
-];
-const situationIsNot = [
-    'a disease',
-    'a habit',
-    'anyone\'s fault',
-    'psychological',
-];
-const situationCan = [
-    'be taken under control',
-    'be genetic',
-    'be progressional',
-    'be accompanied by secondary behaviors',
-];
-const situationCannot = [
-    'be treated 100% after adolescence',
-    'be treated by singing',
-    'be treated by reading outloud',
-    'be learned',
-];
-
-// Assign situations based on the first verb
-let situations = []
-
-switch (verb) {
-    case 'is':
-        situations = situationIs;
-        break;
-    case 'is not':
-        situations = situationIsNot;
-        break;
-    case 'can':
-        situations = situationCan;
-        break;
-    case 'cannot':
-        situations = situationCannot;
-        break;
-    default:
-        situations = [];
-        break;
+// Choose a random verb
+const chooseVerb = () => {
+    const verbs = ['is', 'is not', 'can', 'cannot'];
+    const chosenVerb = verbs[Math.floor(Math.random() * verbs.length)];
+    return chosenVerb;
 }
 
-// Pick a situation
-let situation = situations[Math.floor(Math.random() * situations.length)];
-// console.log(situation);
+// Get the verb
+const verb = chooseVerb(); 
+console.log(verb);
+
+
+// Choose the situation depending on the chosen verb
+const allSituations = (vrb) => {
+    const situations = [];
+
+    // Assign the corresponding situations
+    switch (vrb) {
+        case 'is':
+            situations.push(
+                'a speech fluency disorder',
+                'assumed to be %1 common among the population',
+                'different for every stutterer',
+                'based on yet to be discovered neurophysioloical reasons'
+            );
+            return situations;
+            break;
+
+        case 'is not':
+            situations.push(
+                'a disease',
+                'a habit',
+                'anyone\'s fault',
+                'psychological'
+            );
+            return situations;
+            break;
+
+        case 'can':
+            situations.push(
+                'be taken under control',
+                'be genetic',
+                'be progressional',
+                'be accompanied by secondary behaviors'
+            );
+            return situations;
+            break;
+
+        case 'cannot':
+            situations.push(
+                'be treated 100% after adolescence',
+                'be treated by singing',
+                'be treated by reading outloud',
+                'be learned'
+            );
+            return situations;
+            break;
+
+        default:
+            return situations;
+            break;
+    }
+}
+
+const sits = allSituations(verb); 
+// console.log(sits);
+
+// Choose a random situation among all situations for the chosen verb
+function chooseSituation(arr) {
+    const chosenSituation = arr[Math.floor(Math.random() * arr.length)];
+    return chosenSituation;
+}
+const situation = chooseSituation(sits);
+console.log(situation);
+
+
+/*
 
 // Define different advices
 const advices = [
@@ -84,3 +99,4 @@ let advice = advices[Math.floor(Math.random() * advices.length)];
 // The final message
 console.log('A message for stutterers and their loved ones:');
 console.log(`Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`); 
+*/

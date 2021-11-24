@@ -22,54 +22,56 @@ console.log(verb);
 
 // Choose the situation depending on the chosen verb
 const allSituations = (vrb) => {
-    const situations = [];
+    let situations = [];
+
+    const isSits = [
+        'a speech fluency disorder',
+        'assumed to be %1 common among the population',
+        'different for every stutterer',
+        'based on yet to be discovered neurophysioloical reasons'
+    ];
+    const isnotSits = [
+        'a disease',
+        'a habit',
+        'anyone\'s fault',
+        'psychological'
+    ];
+    const canSits = [               
+        'be taken under control',
+        'be genetic',
+        'be progressional',
+        'be accompanied by secondary behaviors'
+    ];
+    const cannotSits = [
+        'be treated 100% after adolescence',
+        'be treated by singing',
+        'be treated by reading outloud',
+        'be learned'
+    ];
 
     // Assign the corresponding situations
     switch (vrb) {
         case 'is':
-            situations.push(
-                'a speech fluency disorder',
-                'assumed to be %1 common among the population',
-                'different for every stutterer',
-                'based on yet to be discovered neurophysioloical reasons'
-            );
-            return situations;
+            situations = isSits;
             break;
 
         case 'is not':
-            situations.push(
-                'a disease',
-                'a habit',
-                'anyone\'s fault',
-                'psychological'
-            );
-            return situations;
+            situations = isnotSits;
             break;
 
         case 'can':
-            situations.push(
-                'be taken under control',
-                'be genetic',
-                'be progressional',
-                'be accompanied by secondary behaviors'
-            );
-            return situations;
+            situations = canSits;
             break;
 
         case 'cannot':
-            situations.push(
-                'be treated 100% after adolescence',
-                'be treated by singing',
-                'be treated by reading outloud',
-                'be learned'
-            );
-            return situations;
+            situations = cannotSits;
             break;
 
         default:
-            return situations;
+            situations = [];
             break;
     }
+    return situations;
 }
 
 const sits = allSituations(verb); 

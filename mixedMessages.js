@@ -15,14 +15,14 @@ const chooseVerb = () => {
     return chosenVerb;
 }
 
-// Get the verb
+// Save the chosen verb as a variable
 const verb = chooseVerb(); 
 console.log(verb);
 
 
-// Choose the situation depending on the chosen verb
-const allSituations = (vrb) => {
-    let situations = [];
+// Choose the possible situations depending on the chosen verb
+const choosePossibleSituations = (vrb) => {
+    let possibleSituations = [];
 
     const isSits = [
         'a speech fluency disorder',
@@ -52,38 +52,41 @@ const allSituations = (vrb) => {
     // Assign the corresponding situations
     switch (vrb) {
         case 'is':
-            situations = isSits;
+            possibleSituations = isSits;
             break;
 
         case 'is not':
-            situations = isnotSits;
+            possibleSituations = isnotSits;
             break;
 
         case 'can':
-            situations = canSits;
+            possibleSituations = canSits;
             break;
 
         case 'cannot':
-            situations = cannotSits;
+            possibleSituations = cannotSits;
             break;
 
         default:
-            situations = [];
+            possibleSituations = [];
             break;
     }
-    return situations;
+    return possibleSituations;
 }
 
-const sits = allSituations(verb); 
-// console.log(sits);
+// Save possible situations as a variable
+const situations = choosePossibleSituations(verb); 
+// console.log(situations);
 
-// Choose a random situation among all situations for the chosen verb
-function chooseSituation(arr) {
+// Choose a random situation among possible situations for the chosen verb
+const chooseSituation = (arr) => {
     const chosenSituation = arr[Math.floor(Math.random() * arr.length)];
     return chosenSituation;
 }
-const situation = chooseSituation(sits);
-console.log(situation);
+
+// Save the chosen situation as a variable
+const situation = chooseSituation(situations);
+// console.log(situation);
 
 
 /*

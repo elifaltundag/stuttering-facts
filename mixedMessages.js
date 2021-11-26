@@ -88,18 +88,19 @@ const chooseSituation = (arr) => {
 const situation = chooseSituation(situations);
 // console.log(situation);
 
+const chooseAdvice = () => {
+    const advices = [
+        'not complete words or sentences',
+        'remain eye contact',
+        'have just a little more patience',
+        'not make any suggestions like "take a deep breath", "calm down", "talk slowly"'
+    ]; 
 
+    const advice = advices[Math.floor(Math.random() * advices.length)];
+
+    return advice; 
+}
 /*
-
-// Define different advices
-const advices = [
-    'not complete words or sentences',
-    'remain eye contact',
-    'have just a little more patience',
-    'not make any suggestions like "take a deep breath", "calm down", "talk slowly"'
-]
-
-let advice = advices[Math.floor(Math.random() * advices.length)];
 
 // The final message
 console.log('A message for stutterers and their loved ones:');

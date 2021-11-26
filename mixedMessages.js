@@ -17,7 +17,7 @@ const chooseVerb = () => {
 
 // Save the chosen verb as a variable
 const verb = chooseVerb(); 
-console.log(verb);
+// console.log(verb);
 
 
 // Choose the possible situations depending on the chosen verb
@@ -96,13 +96,15 @@ const chooseAdvice = () => {
         'not make any suggestions like "take a deep breath", "calm down", "talk slowly"'
     ]; 
 
-    const advice = advices[Math.floor(Math.random() * advices.length)];
+    const chosenAdvice = advices[Math.floor(Math.random() * advices.length)];
 
-    return advice; 
+    return chosenAdvice; 
 }
-/*
 
-// The final message
-console.log('A message for stutterers and their loved ones:');
-console.log(`Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`); 
-*/
+// Save the chosen advice as a variable 
+const advice = chooseAdvice(); 
+// console.log(advice); 
+
+// The final message 
+const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
+console.log(message);

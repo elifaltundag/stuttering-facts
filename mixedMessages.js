@@ -108,3 +108,4 @@ const advice = chooseAdvice();
 // The final message 
 const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
 console.log(message);
+

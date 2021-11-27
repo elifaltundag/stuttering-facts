@@ -9,7 +9,7 @@ The exptectd output of this program is to generate a message to stutterers and t
 
 
 // Choose a random verb
-const chooseVerb = () => {
+function chooseVerb() {
     const verbs = ['is', 'is not', 'can', 'cannot'];
     const chosenVerb = verbs[Math.floor(Math.random() * verbs.length)];
     return chosenVerb;
@@ -20,8 +20,8 @@ const verb = chooseVerb();
 // console.log(verb);
 
 
-// Choose the possible situations depending on the chosen verb
-const choosePossibleSituations = (vrb) => {
+// Choose the possible situations depending on the chosen verb: helper function
+function choosePossibleSituations(vrb) {
     let possibleSituations = [];
 
     const isSits = [
@@ -36,7 +36,7 @@ const choosePossibleSituations = (vrb) => {
         'anyone\'s fault',
         'psychological'
     ];
-    const canSits = [               
+    const canSits = [
         'be taken under control',
         'be genetic',
         'be progressional',
@@ -74,31 +74,31 @@ const choosePossibleSituations = (vrb) => {
     return possibleSituations;
 }
 
-// Save possible situations as a variable
-const situations = choosePossibleSituations(verb); 
-// console.log(situations);
 
 // Choose a random situation among possible situations for the chosen verb
-const chooseSituation = (arr) => {
-    const chosenSituation = arr[Math.floor(Math.random() * arr.length)];
+function chooseSituation() {
+    // Save possible situations as a block scope variable
+    const situations = choosePossibleSituations(verb); 
+    
+    // Choose the random situation
+    const chosenSituation = situations[Math.floor(Math.random() * situations.length)];
     return chosenSituation;
 }
 
 // Save the chosen situation as a variable
-const situation = chooseSituation(situations);
+const situation = chooseSituation();
 // console.log(situation);
 
-const chooseAdvice = () => {
+function chooseAdvice() {
     const advices = [
         'not complete words or sentences',
         'remain eye contact',
         'have just a little more patience',
         'not make any suggestions like "take a deep breath", "calm down", "talk slowly"'
-    ]; 
+    ];
 
     const chosenAdvice = advices[Math.floor(Math.random() * advices.length)];
-
-    return chosenAdvice; 
+    return chosenAdvice;
 }
 
 // Save the chosen advice as a variable 

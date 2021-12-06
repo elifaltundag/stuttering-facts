@@ -10,7 +10,7 @@ The exptectd output of this program is to generate a message to stutterers and t
 
 // Choose a random verb
 function chooseVerb() {
-    const verbs = ['is', 'is not', 'can', 'cannot'];
+    const verbs = ['is', 'can'];
     const chosenVerb = verbs[Math.floor(Math.random() * verbs.length)];
     return chosenVerb;
 }
@@ -28,26 +28,24 @@ function choosePossibleSituations(vrb) {
         'a speech fluency disorder',
         'assumed to be %1 common among the population',
         'different for every stutterer',
-        'based on yet to be discovered neurophysioloical reasons'
+        'based on yet to be discovered neurophysioloical reasons',
+        'not a disease',
+        'not a habit',
+        'not anyone\'s fault',
+        'not psychological'
     ];
-    const isnotSits = [
-        'a disease',
-        'a habit',
-        'anyone\'s fault',
-        'psychological'
-    ];
+    
     const canSits = [
         'be taken under control',
         'be genetic',
         'be progressional',
-        'be accompanied by secondary behaviors'
+        'be accompanied by secondary behaviors',
+        'not be treated 100% after adolescence',
+        'not be treated by singing',
+        'not be treated by reading outloud',
+        'not be learned'
     ];
-    const cannotSits = [
-        'be treated 100% after adolescence',
-        'be treated by singing',
-        'be treated by reading outloud',
-        'be learned'
-    ];
+    
 
     // Assign the corresponding situations
     switch (vrb) {
@@ -55,16 +53,8 @@ function choosePossibleSituations(vrb) {
             possibleSituations = isSits;
             break;
 
-        case 'is not':
-            possibleSituations = isnotSits;
-            break;
-
         case 'can':
             possibleSituations = canSits;
-            break;
-
-        case 'cannot':
-            possibleSituations = cannotSits;
             break;
 
         default:
@@ -108,4 +98,5 @@ const advice = chooseAdvice();
 // The final message 
 const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
 console.log(message);
+
 

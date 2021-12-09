@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A1A2D;  
+}
+
+h1 {
+    font-family: "Marcellus";
+    text-align: center;
+    color: #DD6B4D;
+    font-size: 60px;
+    
+}
+
+h2 {
+    font-family: "Noto Sans Display";
+    font-size: 40px;
+    color: #DAE1E7;
+}
+
+p {
+    font-family: "Noto Sans Display";
+    color: #DAE1E7;
+}

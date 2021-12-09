@@ -15,12 +15,24 @@ h1 {
 }
 
 h2 {
-    font-family: "Noto Sans Display";
+    font-family: "Marcellus";
     font-size: 40px;
-    color: #DAE1E7;
+    color: #DD6B4D;
+    opacity: 0.8;
 }
 
 p {
     font-family: "Noto Sans Display";
     color: #DAE1E7;
+}
+
+.text-box {
+    border-radius: 20px;
+    background-color: #143E68;
+    
+}
+
+.subtext-box {
+    display: inline-block;
+    padding: 10px 20px;
 }

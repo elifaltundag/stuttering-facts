@@ -16,12 +16,12 @@ function chooseVerb() {
 }
 
 // Save the chosen verb as a variable
-const verb = chooseVerb(); 
+// const verb = chooseVerb(); 
 // console.log(verb);
 
 
 // Choose the possible situations depending on the chosen verb: helper function
-function choosePossibleSituations(vrb) {
+function chooseSituation(vrb) {
     let possibleSituations = [];
 
     const isSits = [
@@ -29,10 +29,6 @@ function choosePossibleSituations(vrb) {
         'assumed to be %1 common among the population',
         'different for every stutterer',
         'based on yet to be discovered neurophysioloical reasons',
-        'not a disease',
-        'not a habit',
-        'not anyone\'s fault',
-        'not psychological'
     ];
 
     const isNotSits = [
@@ -47,10 +43,6 @@ function choosePossibleSituations(vrb) {
         'be genetic',
         'be progressional',
         'be accompanied by secondary behaviors',
-        'not be treated 100% after adolescence',
-        'not be treated by singing',
-        'not be treated by reading outloud',
-        'not be learned'
     ];
 
     const cannotSits = [
@@ -83,22 +75,23 @@ function choosePossibleSituations(vrb) {
             possibleSituations = [];
             break;
     }
-    return possibleSituations;
+    let chosenSituation = possibleSituations[Math.floor(Math.random() * possibleSituations.length)];
+    return chosenSituation;
 }
 
 
 // Choose a random situation among possible situations for the chosen verb
-function chooseSituation() {
+/* function chooseSituation() {
     // Save possible situations as a block scope variable
-    const situations = choosePossibleSituations(verb); 
+    let situations = choosePossibleSituations(verb); 
     
     // Choose the random situation
-    const chosenSituation = situations[Math.floor(Math.random() * situations.length)];
+    let chosenSituation = situations[Math.floor(Math.random() * situations.length)];
     return chosenSituation;
-}
+} */
 
 // Save the chosen situation as a variable
-const situation = chooseSituation();
+// const situation = chooseSituation();
 // console.log(situation);
 
 function chooseAdvice() {
@@ -114,30 +107,45 @@ function chooseAdvice() {
 }
 
 // Save the chosen advice as a variable 
-const advice = chooseAdvice(); 
+// const advice = chooseAdvice(); 
 // console.log(advice); 
 
 // The final message 
-const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
-console.log(message);
+// const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
+// console.log(message);
 
 
 
 // Create message element
 let genMessage = document.createElement('p');
 genMessage.id = 'generated-message';
-genMessage.innerHTML = message;
+genMessage.innerHTML = '';
 
 let position = document.getElementById('generated-message');
-position.appendChild(genMessage);
+
+
 
 // Hide it first
 genMessage.style.display = 'none';
 
-function displayMessage(event) {
+function displayMessage() {
+    let verb = chooseVerb(); 
+    console.log(verb);
+    let situation = chooseSituation(verb);
+    console.log(situation);
+    let advice = chooseAdvice();
+    console.log(advice);
+    let message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
+    console.log(message);
+
+    genMessage.innerHTML = message;    
+    position.appendChild(genMessage);
+
     genMessage.style.display = 'block';
+    
 }
 
 let generatorButton = document.getElementById('gen-button');
+
 generatorButton.addEventListener('click', displayMessage);
 

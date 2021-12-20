@@ -16,9 +16,9 @@ h1 {
 
 h2 {
     font-family: "Marcellus";
-    font-size: 40px;
-    color: #DD6B4D;
-    opacity: 0.8;
+    font-size: 30px;
+    color: #DAE1E7;
+    opacity: 0.75;
 }
 
 p {
@@ -35,4 +35,14 @@ p {
 .subtext-box {
     display: inline-block;
     padding: 10px 20px;
+
+}
+
+#gen-button {
+    background-color: #DD6B4D;
+    color: #DAE1E7;
+}
+
+#generated-message {
+    background-color: #143E68;
 }

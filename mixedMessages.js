@@ -34,6 +34,13 @@ function choosePossibleSituations(vrb) {
         'not anyone\'s fault',
         'not psychological'
     ];
+
+    const isNotSits = [
+        'a disease',
+        'a habit',
+        'anyone\'s fault',
+        'psychological'
+    ];
     
     const canSits = [
         'be taken under control',
@@ -45,6 +52,13 @@ function choosePossibleSituations(vrb) {
         'not be treated by reading outloud',
         'not be learned'
     ];
+
+    const cannotSits = [
+        'be treated 100% after adolescence',
+        'be treated by singing',
+        'be treated by reading outloud',
+        'be learned'
+    ];
     
 
     // Assign the corresponding situations
@@ -52,9 +66,17 @@ function choosePossibleSituations(vrb) {
         case 'is':
             possibleSituations = isSits;
             break;
+        
+        case 'is not':
+            possibleSituations = isNotSits;
+            break;
 
         case 'can':
             possibleSituations = canSits;
+            break;
+        
+        case 'cannot':
+            possibleSituations = cannotSits;
             break;
 
         default:
@@ -84,7 +106,7 @@ function chooseAdvice() {
         'not complete words or sentences',
         'remain eye contact',
         'have just a little more patience',
-        'not make any suggestions like "take a deep breath", "calm down", "talk slowly"'
+        'not make suggestions like "take a deep breath", "calm down", "talk slowly"'
     ];
 
     const chosenAdvice = advices[Math.floor(Math.random() * advices.length)];
@@ -99,4 +121,23 @@ const advice = chooseAdvice();
 const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
 console.log(message);
 
+
+
+// Create message element
+let genMessage = document.createElement('p');
+genMessage.id = 'generated-message';
+genMessage.innerHTML = message;
+
+let position = document.getElementById('generated-message');
+position.appendChild(genMessage);
+
+// Hide it first
+genMessage.style.display = 'none';
+
+function displayMessage(event) {
+    genMessage.style.display = 'block';
+}
+
+let generatorButton = document.getElementById('gen-button');
+generatorButton.addEventListener('click', displayMessage);
 

@@ -4,20 +4,16 @@ Date:   21 Nov 2021
 Mixed Messages project on Codecademy. 
 
 The exptectd output of this program is to generate a message to stutterers and their loved ones:
-`Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`
+`Stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} durin a conversation.`
 */
 
 
 // Choose a random verb
 function chooseVerb() {
-    const verbs = ['is', 'can'];
+    const verbs = ['is', 'is not', 'can', 'cannot'];
     const chosenVerb = verbs[Math.floor(Math.random() * verbs.length)];
     return chosenVerb;
 }
-
-// Save the chosen verb as a variable
-// const verb = chooseVerb(); 
-// console.log(verb);
 
 
 // Choose the possible situations depending on the chosen verb: helper function
@@ -79,73 +75,35 @@ function chooseSituation(vrb) {
     return chosenSituation;
 }
 
-
-// Choose a random situation among possible situations for the chosen verb
-/* function chooseSituation() {
-    // Save possible situations as a block scope variable
-    let situations = choosePossibleSituations(verb); 
-    
-    // Choose the random situation
-    let chosenSituation = situations[Math.floor(Math.random() * situations.length)];
-    return chosenSituation;
-} */
-
-// Save the chosen situation as a variable
-// const situation = chooseSituation();
-// console.log(situation);
-
+// Choose a random advice
 function chooseAdvice() {
     const advices = [
-        'not complete words or sentences',
-        'remain eye contact',
-        'have just a little more patience',
-        'not make suggestions like "take a deep breath", "calm down", "talk slowly"'
+        'their words or sentences were not completed',
+        'people kept eye contact',
+        'others just had just a little more patience listening to them',
+        'people didn\'t make suggestions like "take a deep breath", "calm down", "talk slowly"'
     ];
 
     const chosenAdvice = advices[Math.floor(Math.random() * advices.length)];
     return chosenAdvice;
 }
 
-// Save the chosen advice as a variable 
-// const advice = chooseAdvice(); 
-// console.log(advice); 
+// Get the message element
+let genMessage = document.getElementById('generated-message'); 
 
-// The final message 
-// const message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
-// console.log(message);
-
-
-
-// Create message element
-let genMessage = document.createElement('p');
-genMessage.id = 'generated-message';
-genMessage.innerHTML = '';
-
-let position = document.getElementById('generated-message');
-
-
-
-// Hide it first
-genMessage.style.display = 'none';
-
+// Generate the message
 function displayMessage() {
-    let verb = chooseVerb(); 
-    console.log(verb);
-    let situation = chooseSituation(verb);
-    console.log(situation);
-    let advice = chooseAdvice();
-    console.log(advice);
-    let message = `Stuttering ${verb} ${situation}.\nPeople should ${advice} when talking to a stutterer.`;
-    console.log(message);
-
-    genMessage.innerHTML = message;    
-    position.appendChild(genMessage);
-
-    genMessage.style.display = 'block';
+    let verb = chooseVerb()
+      , situation = chooseSituation(verb)
+      , advice = chooseAdvice()
+      , message = `Stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} during a conversation.`;
     
+    genMessage.textContent = message;    
+    genMessage.style.display = 'block';
+
+    return message
 }
 
+// Add event listener to the "Get a random fact" button
 let generatorButton = document.getElementById('gen-button');
-
 generatorButton.addEventListener('click', displayMessage);
-

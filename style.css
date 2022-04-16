@@ -32,14 +32,11 @@ h1 {
 h2 {
     font-family: var(--ff-sans-serif-1);
     font-size: 3rem;
-    outline: var(--ref-outline-2);
 }
 
 p {
     font-family: var(--ff-sans-serif-2);
     font-size: 1.2rem;
-    
-    outline: var(--ref-outline-2);
 }
 
 .text-center {
@@ -51,8 +48,6 @@ button {
     font-size: 1.75rem;
     padding: 0.1em 0.5em;
     align-self: center;
-    
-    outline: var(--ref-outline-2);
 }
 
 
@@ -60,8 +55,6 @@ button {
 .container {
     width: min(90%, 1200px);
     margin: 0 auto 2em;
-
-    outline: var(--ref-outline-1)
 }
 
 .flex {
@@ -88,8 +81,6 @@ button {
     display: none;
 
     font-size: 1.6rem;
-
-    outline: var(--ref-outline-2);
 }
 
 /* Media queries */

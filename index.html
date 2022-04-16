@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Stuttering Facts</title>
-        <link rel="stylesheet" href="./style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS FILE -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;400;600&family=Waterfall&display=swap" rel="stylesheet">
+    
+    <title>Stuttering Facts</title>
+</head>
+
+<body>
         <header>
-            <nav>
-                <ul>
-                    <li>TR</li>
-                    <li>EN</li>
-                </ul>
-            </nav>
-            <h1>Stuttering Facts</h1>
+            <div class="container text-center">
+                <h1>Stuttering Facts</h1>
+            </div>
         </header>
+        
         <main>
-            <div class="text-box">
-                <div class="intro-info">
-                    <h2>Did you know that... </h2>
-                </div>
-                <div class="intro-info">
-                    <p>1% of the population stutters?
-                    <br>there is not a consensus on
-                    <br>what stuttering is and is not?
-                    <br>stuttering has many parameters
-                    <br>affecting its manifestation?
-                    <br>stuttering can severely impact
-                    <br>on a person's psychology 
-                    <br>and life-choices?</p>
-                </div>
+            <div class="container flex" id="intro">
+                <h2 class="flex-item-left text-center">Did you know that...</h2>             
+                <p class="flex-item-right">...there is not a consensus on what stuttering is and is not?<br>...stuttering has many parameters affecting its manifestation?</p>
             </div>
-            <h2>Are you eager to learn more?</h2>
-            <div>
-                <h2 id="gen-button">Get random fact!</h2>
-                <div id="generated-message"></div>
+
+            <div class="container text-center">
+                <h2>Are you eager to learn more?</h2>
+                <button id="gen-button">Get a random fact</button>
+            </div>            
+            
+            <div class="container text-center" id="message">
+                <p id="generated-message"></p>
             </div>
+            
         </main>
+
+        <footer>
+            <div class="container text-center">
+                <p>Web Design & Development by Elif Altundag</p>
+            </div>
+        </footer>
 
         <script src="./mixedMessages.js"></script>
     </body>
-</html>
+</html> 

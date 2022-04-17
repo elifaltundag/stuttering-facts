@@ -52,13 +52,13 @@ body {
 /* Typography */
 h1 {
     font-family: var(--ff-display);
-    font-size: clamp(3.8rem, 7vw + 3rem, 9rem);
+    font-size: clamp(2.7rem, 8vw + 1rem, 9rem);
     color: var(--clr-accent);
 }
 
 h2 {
     font-family: var(--ff-sans-serif-1);
-    font-size: clamp(1.8rem, 1.8vw + 1rem, 4rem);
+    font-size: clamp(1.5rem, 1.8vw + 1rem, 4rem);
     color: var(--clr-dark);
     margin-top: 1em;
     margin-bottom: .2em;

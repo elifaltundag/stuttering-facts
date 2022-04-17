@@ -81,7 +81,7 @@ function chooseAdvice() {
         'their words or sentences were not completed',
         'people kept eye contact',
         'others just had just a little more patience listening to them',
-        'people didn\'t make suggestions like "take a deep breath", "calm down", "talk slowly"'
+        'people did not make suggestions like "take a deep breath", "calm down", "talk slowly"'
     ];
 
     const chosenAdvice = advices[Math.floor(Math.random() * advices.length)];

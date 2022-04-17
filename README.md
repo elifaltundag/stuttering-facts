@@ -16,16 +16,15 @@ This is a message generator program. Everytime a user runs the program, they get
 ## Technologies
 * HTML & CSS
 * JavaScript
-* Node.js
 * VS Code
 * Command line
 * Git & Github
 
 ## Further Improvements 
 More functionality
-* Combine with HTML and CSS and turn it into a website  
 * Add a "share your fact" part where users can input data
 * See previous fact(s)
+* Separate facts and advices
 
 More content
 

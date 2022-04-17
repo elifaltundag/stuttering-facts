@@ -7,11 +7,13 @@
     --ref-outline-2: 2px solid blue;
 
     /* Colors */
-    --clr-dark: 0 0 7%;
-    --clr-base: 0 0 35%;
-    --clr-accent: 0 0 65%;
-    --clr-light: 0 0 93%; 
+    --clr-dark: hsl(0, 0%, 32%);
+    --clr-base: hsl(287, 56%, 20%);
+    --clr-accent: hsl(287, 73%, 28%);
+    --clr-light: hsl(0, 0%, 93%); 
 
+
+    /* Her şey 55px yukarda olacak? */ 
 }
 
 
@@ -22,16 +24,23 @@
     padding: 0;
 }
 
+/* Colors on the page */
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+} 
 
 /* Typography */
 h1 {
     font-family: var(--ff-display);
     font-size: 9rem;
+    color: var(--clr-base);
 }
 
 h2 {
     font-family: var(--ff-sans-serif-1);
     font-size: 3rem;
+    color: var(--clr-base);
 }
 
 p {
@@ -43,18 +52,40 @@ p {
     text-align: center;
 }
 
+/* Button states */
 button {
+    cursor: pointer;
+    margin: .5em 0;
+    padding: 0.1em 0.5em 0.2em;
+    align-self: center;
     font-family: var(--ff-sans-serif-1);
     font-size: 1.75rem;
-    padding: 0.1em 0.5em;
-    align-self: center;
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+    border: none;
+    border-radius: .3em;
+
+    transition: 
+        transform 200ms ease-out,
+        filter 200ms ease-out;    
 }
+
+button:hover {
+    transform: scale(1.1);
+    filter: brightness(130%);
+}
+
+button:active {
+    transform: scale(0.99);
+    filter: brightness(115%);
+}
+
 
 
 /* Display */ 
 .container {
     width: min(90%, 1200px);
-    margin: 0 auto 2em;
+    margin: 0 auto 1.5em;
 }
 
 .flex {
@@ -65,16 +96,31 @@ button {
     align-items: center;    
 }
 
-/* .flex-item-left {
-    width: 35%;
-}
-
-.flex-item-right {
-    width: 60%;
-} */
 
 
 /* Sections */
+.footer { 
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--ff-sans-serif-2);
+}
+
+footer p {
+    font-family: var(--ff-sans-serif-1);
+}
+
+#illustration {
+    width: 50%;
+    margin: 0 auto
+}
+
+#message {
+    position: relative;
+}
+
 #generated-message {
     width: min(100%, 40ch);
     margin: 0 auto;
@@ -82,6 +128,8 @@ button {
 
     font-size: 1.6rem;
 }
+
+
 
 /* Media queries */
 @media only screen and (min-width: 800px) {

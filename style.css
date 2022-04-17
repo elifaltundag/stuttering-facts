@@ -51,7 +51,7 @@ body {
 /* Typography */
 h1 {
     font-family: var(--ff-display);
-    font-size: clamp(4rem, 7vw + 3rem, 9rem);
+    font-size: clamp(3.8rem, 7vw + 3rem, 9rem);
     color: var(--clr-accent);
 }
 

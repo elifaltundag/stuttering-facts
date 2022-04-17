@@ -59,7 +59,7 @@ h2 {
     font-family: var(--ff-sans-serif-1);
     font-size: clamp(1.8rem, 1.8vw + 1rem, 4rem);
     color: var(--clr-dark);
-    margin-top: .5em;
+    margin-top: 1em;
     margin-bottom: .2em;
 }
 
@@ -75,7 +75,7 @@ p {
 /* Button states */
 button {
     cursor: pointer;
-    margin: .4em 0;
+    margin-bottom: 1em;
     padding: 0.1em 0.5em 0.2em;
     align-self: center;
     font-family: var(--ff-sans-serif-1);

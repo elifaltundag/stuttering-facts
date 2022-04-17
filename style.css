@@ -36,7 +36,7 @@ body {
     align-items: flex-start;
     padding-top: 10%;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color:var(--clr-light);
     background-image:
         radial-gradient(at 40% 20%, hsla(70, 55%, 82%, 1) 0px, transparent 50%),

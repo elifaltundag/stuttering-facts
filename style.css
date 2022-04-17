@@ -33,19 +33,19 @@ body {
 /* Typography */
 h1 {
     font-family: var(--ff-display);
-    font-size: 9rem;
+    font-size: clamp(4rem, 7vw + 3rem, 9rem);
     color: var(--clr-base);
 }
 
 h2 {
     font-family: var(--ff-sans-serif-1);
-    font-size: 3rem;
+    font-size: clamp(2rem, 1.8vw + 1rem, 4rem);
     color: var(--clr-base);
 }
 
 p {
     font-family: var(--ff-sans-serif-2);
-    font-size: 1.2rem;
+    font-size: clamp(1.5rem, 0.6vw + 1rem, 2rem);
 }
 
 .text-center {
@@ -59,7 +59,7 @@ button {
     padding: 0.1em 0.5em 0.2em;
     align-self: center;
     font-family: var(--ff-sans-serif-1);
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 1.2vw + 1rem, 2.2rem);
     background-color: var(--clr-accent);
     color: var(--clr-light);
     border: none;
@@ -84,21 +84,24 @@ button:active {
 
 /* Display */ 
 .container {
-    width: min(90%, 1200px);
+    width: min(90%, 1600px);
     margin: 0 auto 1.5em;
 }
 
 .flex {
     display: flex;
     flex-direction: column;
-    /* gap: var(--gap, 1rem); */
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;    
 }
 
 
 
 /* Sections */
+.intro-title {
+    min-width: 40%;
+}
+
 .footer { 
     position: relative;
     bottom: 0%;
@@ -112,11 +115,6 @@ footer p {
     font-family: var(--ff-sans-serif-1);
 }
 
-#illustration {
-    width: 50%;
-    margin: 0 auto
-}
-
 #message {
     position: relative;
 }
@@ -126,7 +124,7 @@ footer p {
     margin: 0 auto;
     display: none;
 
-    font-size: 1.6rem;
+    font-size: clamp(1.75rem, 1.2vw + 1rem, 2rem);
 }
 
 
@@ -135,5 +133,7 @@ footer p {
 @media only screen and (min-width: 800px) {
     .flex {
         flex-direction: row;
+        gap: var(--gap, 3rem);
     }
+
 }

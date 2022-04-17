@@ -14,6 +14,7 @@ This is a message generator program. Everytime a user runs the program, they get
 * Raise awareness about stuttering 
 
 ## Technologies
+* HTML & CSS
 * JavaScript
 * Node.js
 * VS Code

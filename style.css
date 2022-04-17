@@ -28,6 +28,7 @@
 /* Colors on the page */
 body {
     color: var(--clr-dark);
+    line-height: 1.5;
 } 
 
 .mesh-grad {

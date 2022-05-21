@@ -85,14 +85,14 @@ p {
 button {
     cursor: pointer;
     margin: 0.2em 0 1em;
-    padding: 0.1em 0.5em 0.2em;
+    padding: 0.2em 0.8em 0.4em;
     align-self: center;
     font-family: var(--ff-sans-serif-1);
     font-size: clamp(1.75rem, 1.2vw + 1rem, 2.2rem);
     background-color: var(--clr-accent);
     color: var(--clr-light);
     border: none;
-    border-radius: .3em;
+    border-radius: 2em;
 
     transition: 
         transform 200ms ease-out,
@@ -100,8 +100,8 @@ button {
 }
 
 button:hover {
-    transform: scale(1.1);
-    filter: brightness(130%);
+    transform: scale(1.08);
+    filter: brightness(115%);
 }
 
 button:active {

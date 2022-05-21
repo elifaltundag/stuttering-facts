@@ -59,13 +59,13 @@ body {
 /* Typography */
 h1 {
     font-family: var(--ff-display);
-    font-size: clamp(2.7rem, 8vw + 1rem, 9rem);
+    font-size: clamp(3rem, 8vw + 1rem, 8rem);
     color: var(--clr-base);
 }
 
 h2 {
     font-family: var(--ff-sans-serif-1);
-    font-size: clamp(1.5rem, 1.8vw + 1rem, 4rem);
+    font-size: clamp(1.5rem, 1.8vw + 1rem, 3rem);
     color: var(--clr-base);
     margin-top: 1em;
     margin-bottom: .2em;
@@ -123,6 +123,12 @@ button:active {
     align-items: center;    
 }
 
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
 
 /* Sections */
 .intro-title {
@@ -137,13 +143,13 @@ button:active {
     width: min(100%, 40ch);
     margin: 0 auto;
     display: none;
-
+    text-align: center;
     font-size: clamp(1.4rem, 1.2vw + 1rem, 2.2rem);
 }
 
 
 /* Media queries */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
     h2 {
         margin-top: 0;
     }
@@ -152,17 +158,16 @@ button:active {
         padding-top: 5%;
     }
     
-    .flex {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
     #intro {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
         margin: 2em auto 3em;
     }
 
-    #generated-message {
+
+    /* #generated-message {
         text-align: center;
-    }
+    } */
 
 }

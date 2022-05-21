@@ -44,15 +44,14 @@ body {
         radial-gradient(at 40% 0%, hsla(4, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
         radial-gradient(at 100% 0%, hsla(18, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
         
-        radial-gradient(at 0% 30%, hsla(280, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 20% 65%, hsla(350, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 40% 50%, hsla(355, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 0% 30%, hsla(270, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 20% 65%, hsla(12, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
         radial-gradient(at 80% 80%, hsla(5, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 40%, hsla(282, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 40%, hsla(260, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
         
-        radial-gradient(at 0% 100%, hsla(285, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 35% 100%, hsla(270, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 100%, hsla(250, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans));
+        radial-gradient(at 0% 100%, hsla(350, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 35% 100%, hsla(27, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 100%, hsla(270, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans));
 }
 
 
@@ -74,6 +73,7 @@ h2 {
 p {
     font-family: var(--ff-sans-serif-2);
     font-size: clamp(1rem, 0.6vw + 1rem, 2rem);
+    opacity: 0.8;
 }
 
 .text-center {
@@ -89,7 +89,7 @@ button {
     align-self: center;
     font-family: var(--ff-sans-serif-1);
     font-size: clamp(1.75rem, 1.2vw + 1rem, 2.2rem);
-    background-color: var(--clr-accent);
+    background-color: var(--clr-base);
     color: var(--clr-light);
     border: none;
     border-radius: 2em;
@@ -101,7 +101,7 @@ button {
 
 button:hover {
     transform: scale(1.08);
-    filter: brightness(115%);
+    filter: brightness(140%);
 }
 
 button:active {
@@ -164,10 +164,4 @@ button:active {
         gap: 3rem;
         margin: 2em auto 3em;
     }
-
-
-    /* #generated-message {
-        text-align: center;
-    } */
-
 }

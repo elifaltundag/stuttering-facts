@@ -8,13 +8,10 @@
 
     /* Colors */
     --clr-dark: hsl(0, 0%, 10%);
-    --clr-base: hsl(273, 100%, 20%);
-    --clr-accent: hsl(25, 80%, 50%);
+    --clr-base: hsl(273, 100%, 15%);
+    --clr-accent: hsl(15, 80%, 50%);
     --clr-light: hsl(0, 0%, 90%); 
-
     --trans: 55%;
-
-
 }
 
 
@@ -47,12 +44,14 @@ body {
         radial-gradient(at 0% 30%, hsla(280, 55%, 45%, 1) 0px, transparent var(--trans)),
         radial-gradient(at 0% 65%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
         radial-gradient(at 30% 50%, hsla(355, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 40%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 70% 80%, hsla(5, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 40%, hsla(282, 55%, 45%, 1) 0px, transparent var(--trans)),
         
         radial-gradient(at 0% 100%, hsla(22, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 55% 100%, hsla(270, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 100%, hsla(352, 55%, 45%, 1) 0px, transparent var(--trans));
+        radial-gradient(at 35% 100%, hsla(270, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 100%, hsla(285, 55%, 45%, 1) 0px, transparent var(--trans));
 }
+
 
 /* Typography */
 h1 {
@@ -77,6 +76,7 @@ p {
 .text-center {
     text-align: center;
 }
+
 
 /* Button states */
 button {
@@ -107,7 +107,6 @@ button:active {
 }
 
 
-
 /* Display */ 
 .container {
     width: min(90%, 1600px);
@@ -122,23 +121,9 @@ button:active {
 }
 
 
-
 /* Sections */
 .intro-title {
     min-width: 40%;
-}
-
-.footer { 
-    /* position: relative;
-    bottom: -40vh;
-    left: 0%; */
-    width: 100%;
-    margin: 0 auto;
-    font-family: var(--ff-sans-serif-2);
-}
-
-footer p {
-    font-family: var(--ff-sans-serif-1);
 }
 
 #message {
@@ -152,7 +137,6 @@ footer p {
 
     font-size: clamp(1.4rem, 1.2vw + 1rem, 2.2rem);
 }
-
 
 
 /* Media queries */

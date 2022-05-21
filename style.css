@@ -41,16 +41,17 @@ body {
     background-color:var(--clr-light);
     background-image:
         radial-gradient(at 0% 0%, hsla(352, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 0% 30%, hsla(250, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 0% 65%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 0% 100%, hsla(25, 55%, 45%, 1) 0px, transparent var(--trans)),
-
-        radial-gradient(at 40% 0%, hsla(22, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 50% 50%, hsla(355, 55%, 45%, 1) 0px, transparent var(--trans)),
-
+        radial-gradient(at 40% 0%, hsla(290, 55%, 45%, 1) 0px, transparent var(--trans)),
         radial-gradient(at 100% 0%, hsla(12, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 70%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 100%, hsla(260, 55%, 45%, 1) 0px, transparent var(--trans));
+        
+        radial-gradient(at 0% 30%, hsla(280, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 0% 65%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 30% 50%, hsla(355, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 40%, hsla(350, 55%, 45%, 1) 0px, transparent var(--trans)),
+        
+        radial-gradient(at 0% 100%, hsla(22, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 55% 100%, hsla(270, 55%, 45%, 1) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 100%, hsla(352, 55%, 45%, 1) 0px, transparent var(--trans));
 }
 
 /* Typography */

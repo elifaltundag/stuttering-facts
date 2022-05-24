@@ -96,7 +96,7 @@ function displayMessage() {
     let verb = chooseVerb()
       , situation = chooseSituation(verb)
       , advice = chooseAdvice()
-      , message = `Stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} during a conversation.`;
+      , message = `Stuttering has many parameters affecting its manifestation, however there is not a consensus on what stuttering is or is not. Researches so far has shown us that stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} during a conversation.`;
     
     genMessage.textContent = message;    
     genMessage.style.display = 'block';

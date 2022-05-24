@@ -84,7 +84,7 @@ button {
     padding: 0.2em 0.8em 0.4em;
     align-self: center;
     font-family: var(--ff-sans-serif-1);
-    font-size: clamp(1.1rem, calc(1.5vw + 0.5rem), 2.2rem);
+    font-size: clamp(1.3rem, calc(1.5vw + 0.5rem), 2.2rem);
     background-color: hsl(var(--clr-base));
     color: hsl(var(--clr-light));
     border: none;

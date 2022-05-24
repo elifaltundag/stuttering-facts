@@ -145,6 +145,18 @@ button:active {
     font-size: clamp(1.4rem, 1.2vw + 1rem, 2.2rem);
 }
 
+footer {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+}
+
+footer > p {
+    font-family: var(--ff-sans-serif-1);
+    font-weight: 200;
+}
+
 
 /* Media queries */
 @media only screen and (min-width: 600px) {

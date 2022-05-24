@@ -202,7 +202,7 @@ footer ol {
 /* Media queries */
 @media only screen and (min-width: 600px) {
     .container {
-        width: min(90%, 130ch);
+        width: min(90%, 145ch);
     }
 
     h2 {

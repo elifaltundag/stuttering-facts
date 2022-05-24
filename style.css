@@ -7,13 +7,12 @@
     --ref-outline-2: 2px solid blue;
 
     /* Colors */
-    --clr-dark: hsl(0, 0%, 10%);
-    --clr-base: hsl(273, 100%, 15%);
-    --clr-accent: hsl(15, 77%, 50%);
+    --clr-base: 283, 100%, 15%;
+
     --clr-light: 0, 0%, 90%; 
-    --satur: 55%;
-    --bright: 45%;
-    --opac: 0.95;
+    --satur: 65%;
+    --bright: 40%;
+    --opac: 0.97;
     --trans: 55%;
 }
 
@@ -37,7 +36,7 @@ body {
     align-items: flex-start;
     width: 100vw;
     min-height: 100vh;
-    background-color:var(--clr-light);
+    background-color: hsl(var(--clr-light));
     background-image:
         radial-gradient(at 0% 0%, hsla(350, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
         radial-gradient(at 40% 0%, hsla(4, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
@@ -57,20 +56,20 @@ body {
 /* Typography */
 h1 {
     font-family: var(--ff-display);
-    font-size: clamp(3rem, 5vw + 1rem, 8rem);
-    color: var(--clr-base);
+    font-size: clamp(3rem, calc(6vw + 1.2rem), 8rem);
+    color: hsl(var(--clr-base));
 }
 
 h2 {
     font-family: var(--ff-sans-serif-1);
-    font-size: clamp(1.5rem, 1.8vw + 1rem, 3rem);
-    color: var(--clr-base);
+    font-size: clamp(1.5rem, calc(1.8vw + 1rem), 3rem);
+    color: hsl(var(--clr-base));
     margin-bottom: .2em;
 }
 
 p, ol{
     font-family: var(--ff-sans-serif-2);
-    font-size: clamp(1rem, 0.6vw + 1rem, 2rem);
+    font-size: clamp(1rem, calc(0.6vw + 1rem), 2rem);
 }
 
 .text-center {
@@ -85,9 +84,9 @@ button {
     padding: 0.2em 0.8em 0.4em;
     align-self: center;
     font-family: var(--ff-sans-serif-1);
-    font-size: clamp(1.75rem, 1.2vw + 1rem, 2.2rem);
-    background-color: var(--clr-base);
-    color: var(--clr-light);
+    font-size: clamp(1.1rem, calc(1.5vw + 0.5rem), 2.2rem);
+    background-color: hsl(var(--clr-base));
+    color: hsl(var(--clr-light));
     border: none;
     border-radius: 2em;
 
@@ -103,8 +102,8 @@ button {
     align-self: center;
     font-family: var(--ff-sans-serif-1);
 
-    background-color: var(--clr-base);
-    color: var(--clr-light);
+    background-color: hsl(var(--clr-base));
+    color: hsl(var(--clr-light));
     border: none;
     border-radius: 2em;
 
@@ -126,7 +125,7 @@ button:active, .btn-small:active {
 
 /* Display */ 
 .container {
-    width: min(90%, 1600px);
+    width: min(60ch, 92%);
     margin: 0 auto 1.5em;
 }
 
@@ -154,17 +153,16 @@ button:active, .btn-small:active {
 }
 
 #generated-message {
-    width: min(100%, 55ch);
+    width: 100%;
     margin: 0 auto;
     display: none;
-    text-align: center;
-    font-size: clamp(1.1rem, .5vw + 1rem, 2.2rem);
+    text-align: left;
+    font-size: clamp(1.1rem, calc(1vw + 0.8rem), 2.2rem);
 }
 
 footer {
     position: absolute;
     bottom: 2%;
-    left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -174,14 +172,21 @@ footer {
 footer p, footer ol, footer li {
     font-family: var(--ff-sans-serif-1);
     font-weight: 200;
-    font-size: clamp(1.2rem, 0.8vw + 1rem, 2.2rem);
+}
+
+footer p {
+    font-size: clamp(1.2rem, calc(0.8vw + 1rem), 2.2rem);
+}
+
+footer ol {
+    font-size: clamp(1rem, calc(0.8vw + 1rem), 2.2rem);
 }
 
 .social-media-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: .5em 0 1em;
+    margin: .5em 0;
     gap: 0.8em;
 }
 
@@ -191,12 +196,15 @@ footer p, footer ol, footer li {
 
 #social-media li {
     font-weight: 400;
-    font-size: clamp(1.1rem, 0.8vw + 0.6rem, 1.5rem);
+    font-size: clamp(0.9rem, calc(0.8vw + 0.6rem), 1.6rem);
 }
-
 
 /* Media queries */
 @media only screen and (min-width: 600px) {
+    .container {
+        width: min(90%, 130ch);
+    }
+
     h2 {
         margin-top: 0;
     }
@@ -210,12 +218,14 @@ footer p, footer ol, footer li {
     
     footer {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
     }
 
     .social-media-links {
         justify-content: flex-start;
+        margin-bottom: 0;
+        gap: 1em;
     }
     #social-media {
         text-align: left;

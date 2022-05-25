@@ -89,7 +89,7 @@ function chooseAdvice() {
 }
 
 // Get the message element
-let genMessage = document.getElementById('generated-message'); 
+let randomFact = document.getElementById('fact-text'); 
 
 // Generate the message
 function displayMessage() {
@@ -98,12 +98,9 @@ function displayMessage() {
       , advice = chooseAdvice()
       , message = `Stuttering has many parameters affecting its manifestation, however there is not a consensus on what stuttering is or is not. Researches so far has shown us that stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} during a conversation.`;
     
-    genMessage.textContent = message;    
-    genMessage.style.display = 'block';
-
-    return message
+    randomFact.textContent = message;    
 }
 
 // Add event listener to the "Get a random fact" button
-let generatorButton = document.getElementById('gen-button');
+let generatorButton = document.getElementById('fact-generator');
 generatorButton.addEventListener('click', displayMessage);

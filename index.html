@@ -5,56 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- CSS FILE -->
-    <link href="style.css" rel="stylesheet" type="text/css">
-    
+    <title>Document Title</title>
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Raleway:wght@300;400;600&family=Waterfall&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous"
+  />
+
+    <!-- CSS --> 
+    <link href="style.css" rel="stylesheet" type="text/css">
     
-    <!-- JS -->
-    <script src="./mixedMessages.js" defer></script>
-    
-    <title>Stuttering Facts</title>
+    <!-- JAVASCIRPT -->
+    <script src="script.js" defer></script>    
 </head>
-
 <body>
-    <div class="mesh-grad">
-        <div class="container">
-            <header class="text-center">
-                <h1>St-st-stuttering Fff-facts</h1>
-            </header>
-            
-            <main>
-                <div class="text-center">
-                    <button id="gen-button">Click here to get a random fact</button>
-                </div>            
-                
-                <div id="message">
-                    <p id="generated-message"></p>
-                </div>         
-            </main>
-
-            <footer class="container">
-                <div id="social-media">
-                    <p>Follow us on social media for daily random facts</p>
-                    <ol class="social-media-links">
-                        <li class="btn-small"><a>Instagram</a></li>
-                        <li class="btn-small"><a>Twitter</a></li>
-                    </ol>
-                </div>
-                
-                <div id="collabolators">
-                    <p>In collaboration with...</p>
-                    <p>Web Design &amp; Development by Elif Altundag</p>
-                </div>
-                
-            </footer>
-        </div>
-    </div>
-
-
+    <header class="container">
+        <nav class="flex-nav nav-bar">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About Us</a></li>
+            </ul>
+            <ul class="languages">
+                <li><a href="#" class="nav-link">English</a></li>
+                <li><a href="#" class="nav-link">Türkçe</a></li>
+            </ul>
+        </nav>
         
-    </body>
-</html> 
+        <h1>St-st-stuttering Fff-facts</h1>
+    </header>
+
+    <main class="container flex-main">
+        <p id="fact-text"></p>
+        <button id="fact-generator"><span class="enlarge">Click here</span><br>for a random fact</button>
+    </main>
+
+    <footer>
+        <div class="container"> 
+            <div class="flex-footer">
+                <div class="social-media">
+                    <h2>Follow us on social media for daily facts</h2>
+                    <ul class="sm-list">
+                        <li><a href="#" class="sm-link">Instagram</a></li>
+                        <li><a href="#" class="sm-link">Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div class="creators">
+                    <h2>In collaboration with...</h2>
+                </div>
+            </div>
+            <h3>Project, Design & Development by Elif Altundag</h3>
+        </div>
+    </footer>
+    
+</body>
+</html>

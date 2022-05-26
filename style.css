@@ -238,10 +238,6 @@ a {
     position: absolute;
 }
 
-.nav-link:visited,
-.sm-link:visited {
-    opacity: 0.2;
-}
 
 #fact-generator {
     cursor: pointer;

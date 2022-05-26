@@ -4,7 +4,7 @@
 
 :root {
     /** Fonts */
-    --ff-title: "Waterfall", cursive;
+    --ff-title: "Allura", cursive;
     --ff-subtitle: "Oswald", sans-serif;
     --ff-parag: "Raleway", sans-serif;
 
@@ -18,8 +18,9 @@
     --clr-light: 0, 0%, 80%; 
     --satur: 65%;
     --bright: 40%;
-    --opac: 0.97;
+    --opac-mesh: 0.97;
     --trans: 55%; 
+    --opac-text: 0.85;
 
     --gap: 2em;
 
@@ -54,18 +55,18 @@ body {
 
     background-color: hsl(var(--clr-light));
     background-image:
-        radial-gradient(at 0% 0%, hsla(350, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 40% 0%, hsla(4, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 0%, hsla(18, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 0% 0%, hsla(350, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 40% 0%, hsla(4, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 0%, hsla(18, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
         
-        radial-gradient(at 0% 30%, hsla(270, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 20% 65%, hsla(12, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 80% 80%, hsla(5, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 40%, hsla(260, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
+        radial-gradient(at 0% 30%, hsla(270, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 20% 65%, hsla(12, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 80% 80%, hsla(5, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 40%, hsla(260, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
         
-        radial-gradient(at 0% 100%, hsla(350, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 35% 100%, hsla(27, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans)),
-        radial-gradient(at 100% 100%, hsla(270, var(--satur), var(--bright), var(--opac)) 0px, transparent var(--trans));
+        radial-gradient(at 0% 100%, hsla(350, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 35% 100%, hsla(27, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans)),
+        radial-gradient(at 100% 100%, hsla(270, var(--satur), var(--bright), var(--opac-mesh)) 0px, transparent var(--trans));
     color: hsl(var(--clr-light));
 }
 
@@ -150,9 +151,9 @@ h1 {
     font-family: var(--ff-title);
     text-align: center;
     color: hsl(var(--clr-base));
-    font-size: clamp(2.9rem, calc(10vw + 0.1rem), 8rem); 
+    font-size: clamp(2.3rem, calc(10vw + 0.1rem), 6rem); 
     line-height: 0.8;
-    margin: 0.2em 0 0.4em;
+    margin: 0.4em 0;
     width: auto;
 }
 
@@ -185,11 +186,6 @@ ul, li {
     font-size: clamp(1.3rem, calc(1.3vw + 0.1rem), 2rem);
 }
 
-a {
-    text-decoration: none;
-    color: hsl(var(--clr-light));
-}
-
 .enlarge {
     font-size: 1.8em;
 }
@@ -198,8 +194,9 @@ a {
 /*! COMPONENTS           */
 /*! -------------------- */
 .link, .link:link {
+    text-decoration: none;
     position: relative;
-    color: hsla(var(--clr-light), 1);
+    color: hsla(var(--clr-light), var(--opac-text));
 }
 
 
@@ -210,7 +207,7 @@ a {
     height: 2px;
     left: 0;
     bottom: -0.1em;
-    background-color: hsl(var(--clr-light));
+    background-color: hsla(var(--clr-light), var(--opac-text));
     transform-origin: left;
     transform: scaleX(1);
     transition: transform 200ms ease;
@@ -238,6 +235,7 @@ a {
     border-radius: 50%;
     border: none;
 }
+
 
 
 /*! -------------------- */
@@ -280,6 +278,7 @@ footer {
     display: none; 
     background-color: hsla(var(--clr-base), 0.6);
     padding: 1em;
+    margin-top: 0.8em;
     border-radius: 0.5em;
     flex-grow: 5;   
 }

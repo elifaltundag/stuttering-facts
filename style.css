@@ -104,16 +104,6 @@ figure {
 /*! -------------------- */
 /*! UTILITY CLASSES      */
 /*! -------------------- */
-
-/** Display */ 
-nav {
-    display: none;
-}
-
-footer {
-    display: none;
-}
-
 .container {
     width: 92%;
     margin: 0 auto;
@@ -160,10 +150,10 @@ h1 {
     font-family: var(--ff-title);
     text-align: center;
     color: hsl(var(--clr-base));
-    font-size: clamp(2.9rem, calc(8vw + 1rem), 8rem);
+    font-size: clamp(2.9rem, calc(10vw + 0.1rem), 8rem); 
     line-height: 0.8;
     margin: 0.2em 0 0.4em;
-    
+    width: auto;
 }
 
 h2 {
@@ -207,20 +197,13 @@ a {
 /*! -------------------- */
 /*! COMPONENTS           */
 /*! -------------------- */
-.nav-link, .nav-link:link {
+.link, .link:link {
     position: relative;
     color: hsla(var(--clr-light), 1);
 }
 
-.sm-link, .sm-link:link {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 0.5em;
-}
 
-.nav-link::after,
-.sm-link::after {
+.link::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -231,6 +214,10 @@ a {
     transform-origin: left;
     transform: scaleX(1);
     transition: transform 200ms ease;
+}
+
+.sm-link {
+    position: relative;
 }
 
 .sm-link::before {
@@ -256,6 +243,19 @@ a {
 /*! -------------------- */
 /*! SECTIONS             */
 /*! -------------------- */
+
+/** Display */ 
+nav {
+    display: none;
+}
+
+footer {
+    display: none;
+    text-align: center;
+    background-color: hsl(var(--clr-base));
+    padding: 2em 0 1em;
+}
+
 .nav-bar {
     position: absolute;
     width: 100%;
@@ -284,18 +284,13 @@ a {
     flex-grow: 5;   
 }
 
-footer {
-    text-align: center;
-    background-color: hsl(var(--clr-base));
-    padding: 2em 0 1em;
-}
-
 .sm-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: var(--gap);
 }
+
 
 
 /*! -------------------- */
@@ -367,32 +362,30 @@ footer {
     }
 }
 
+
+
 /*! -------------------- */
 /*! HOVER STATES         */
 /*! -------------------- */
 
 @media (hover) {    
-    .nav-link,
-    .sm-link {
+    .link {
         filter: brightness(100%);
         transition: filter var(--dur-link) ease;
     }
 
-    .nav-link::after,
-    .sm-link::after {
+    .link::after{
         transform-origin: left;
         transform: scaleX(0);
         
         transition: transform var(--dur-link) ease;
     }
 
-    .nav-link:hover,
-    .sm-link:hover {
+    .link:hover {
         filter: brightness(150%);
     }
     
-    .nav-link:hover::after,
-    .sm-link:hover::after {
+    .link:hover::after {
         transform: scaleX(1);
 
     }

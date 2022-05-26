@@ -378,17 +378,17 @@ footer {
         transition: opacity var(--dur-link) ease;
     }
 
-    .nav-link:hover,
-    .sm-link:hover {
-        opacity: 0.75;
-    }
-
     .nav-link::after,
     .sm-link::after {
         transform-origin: left;
         transform: scaleX(0);
         
         transition: transform var(--dur-link) ease;
+    }
+
+    .nav-link:hover,
+    .sm-link:hover {
+        opacity: 0.75;
     }
     
     .nav-link:hover::after,
@@ -410,7 +410,3 @@ footer {
     }
 }
 
-a, a:visited, a:focus-within, a:hover {
-    text-decoration: none !important;
-    color: inherit !important;
-}

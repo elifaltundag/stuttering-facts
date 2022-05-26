@@ -126,6 +126,7 @@ figure {
 .flex-main {
     justify-content: flex-end;
     align-items: center;    
+    margin-bottom: 3.5em;
 }
 
 
@@ -177,7 +178,7 @@ p {
 
 button {
     font-family: var(--ff-subtitle);
-    font-size: clamp(1.3rem, calc(1.5vw + 0.5rem), 2.2rem);
+    font-size: clamp(1.3rem, calc(1.8vw + 0.1rem), 2.2rem);
 }
 
 ul, li {
@@ -228,10 +229,9 @@ ul, li {
     background-color: hsl(var(--clr-base));
     color: hsl(var(--clr-light));
     min-width: 20ch;
-    max-width: 25ch;
+    max-width: 23ch;
     aspect-ratio: 1;
     padding: 1em;
-    margin-bottom: 3.5em;
     border-radius: 50%;
     border: none;
 }

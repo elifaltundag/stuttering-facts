@@ -238,8 +238,8 @@ a {
     position: absolute;
 }
 
-.nav-link, .nav-link:visited,
-.sm-link, .sm-link:visited {
+.nav-link:visited,
+.sm-link:visited {
     opacity: 0.2;
 }
 

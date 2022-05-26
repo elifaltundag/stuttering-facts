@@ -251,7 +251,7 @@ a {
     max-width: 22ch;
     aspect-ratio: 1;
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
     border-radius: 50%;
     border: none;
 }
@@ -346,7 +346,7 @@ footer {
     .languages {
         flex-direction: row;
         justify-content: center;
-        gap: var(--gap)
+        gap: var(--gap);
     }
 
     #fact-generator {

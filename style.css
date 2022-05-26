@@ -127,7 +127,6 @@ figure {
 .flex-main {
     justify-content: flex-end;
     align-items: center;    
-    margin-bottom: 6em;
 }
 
 
@@ -235,6 +234,7 @@ ul, li {
     padding: 1em;
     border-radius: 50%;
     border: none;
+    margin-bottom: 6rem;    
 }
 
 

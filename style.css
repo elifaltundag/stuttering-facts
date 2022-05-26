@@ -107,11 +107,11 @@ figure {
 
 /** Display */ 
 nav {
-    display: none !important;
+    display: none;
 }
 
 footer {
-    display: none !important;
+    display: none;
 }
 
 .container {

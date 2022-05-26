@@ -22,7 +22,8 @@
     --trans: 55%; 
     --opac-text: 0.85;
 
-    --gap: 2em;
+    --gap-narrow: 1em;
+    --gap-wide: 2.5em;
 
     /** Durations */ 
     --dur-link: 200ms; 
@@ -115,7 +116,7 @@ figure {
 .flex-footer {
     display: flex;
     flex-direction: column;
-    gap: var(--gap, 1rem);
+    gap: var(--gap-wide, 1rem);
 }
 
 .flex-nav {
@@ -126,7 +127,7 @@ figure {
 .flex-main {
     justify-content: flex-end;
     align-items: center;    
-    margin-bottom: 4em;
+    margin-bottom: 6em;
 }
 
 
@@ -184,7 +185,7 @@ button {
 ul, li {
     list-style: none;
     font-family: var(--ff-subtitle);
-    font-size: clamp(1.3rem, calc(1.3vw + 0.1rem), 2rem);
+    font-size: clamp(1.3rem, calc(1.8vw + 1rem), 1.6rem);
 }
 
 .enlarge {
@@ -271,7 +272,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: var(--gap);
+    gap: var(--gap-narrow);
 }
 
 #fact-text {
@@ -287,7 +288,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: var(--gap);
+    gap: var(--gap-narrow);
 }
 
 
@@ -323,6 +324,7 @@ footer {
     .flex-main {
         justify-content: center;
         gap: 3em;
+        margin-bottom: 2em;
     }
 
     .nav-menu {
@@ -336,7 +338,6 @@ footer {
     .languages {
         flex-direction: row;
         justify-content: center;
-        gap: var(--gap);
     }
 
     #fact-generator {

@@ -409,9 +409,3 @@ footer {
         filter: brightness(150%) saturate(150%);
     }
 }
-
-
-.nav-link:visited,
-.sm-link:visited {
-    filter: contrast(10%);
-}

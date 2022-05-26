@@ -374,8 +374,8 @@ footer {
 @media (hover) {    
     .nav-link,
     .sm-link {
-        opacity: 1;
-        transition: opacity var(--dur-link) ease;
+        filter: brightness(100%);
+        transition: filter var(--dur-link) ease;
     }
 
     .nav-link::after,
@@ -388,7 +388,7 @@ footer {
 
     .nav-link:hover,
     .sm-link:hover {
-        opacity: 0.75;
+        filter: brightness(150%);
     }
     
     .nav-link:hover::after,

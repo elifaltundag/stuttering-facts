@@ -243,11 +243,11 @@ a {
     cursor: pointer;
     background-color: hsl(var(--clr-base));
     color: hsl(var(--clr-light));
-    min-width: 18ch;
-    max-width: 22ch;
+    min-width: 20ch;
+    max-width: 25ch;
     aspect-ratio: 1;
     padding: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     border-radius: 50%;
     border: none;
 }

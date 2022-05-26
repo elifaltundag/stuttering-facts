@@ -247,7 +247,7 @@ a {
     max-width: 25ch;
     aspect-ratio: 1;
     padding: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 3.5em;
     border-radius: 50%;
     border: none;
 }
@@ -408,4 +408,9 @@ footer {
         transform: scale(1.05);
         filter: brightness(150%) saturate(150%);
     }
+}
+
+a, a:visited, a:focus-within, a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
 }

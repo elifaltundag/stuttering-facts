@@ -168,7 +168,6 @@ h3 {
     font-family: var(--ff-subtitle);
     font-weight: 200;
     font-size: clamp(1rem, calc(1.5vw + 0.8rem), 1.2rem);
-    margin-top: 5em;
 }
 
 p {
@@ -252,7 +251,7 @@ footer {
     display: none;
     text-align: center;
     background-color: hsl(var(--clr-base));
-    padding: 2em 0 1em;
+    padding: 1em 0;
 }
 
 .nav-bar {

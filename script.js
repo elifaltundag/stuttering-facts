@@ -1,14 +1,4 @@
-// FACT GENERATOR 
-
-/* 
-Author: Elif Altundag
-Date:   21 Nov 2021
-Mixed Messages project on Codecademy. 
-
-The exptectd output of this program is to generate a message to stutterers and their loved ones:
-`Stuttering ${verb} ${situation}. Stutterers would appreciate if ${advice} durin a conversation.`
-*/
-
+// RANDOM FACT GENERATOR FUNCTIONS
 
 // Choose a random verb
 function chooseVerb() {
@@ -89,10 +79,7 @@ function chooseAdvice() {
     return chosenAdvice;
 }
 
-// Get the message element
-let randomFact = document.getElementById('fact-text'); 
-
-// Static messages 
+// Get the first sentence among static messages randomly
 function getStaticMessage() {
     const staticMessages = [
         "Stuttering has many parameters affecting its manifestation.",
@@ -104,7 +91,7 @@ function getStaticMessage() {
     return staticMessage;
 }
 
-
+// Get a randomized message based on a template
 function getRandomizedMessage() {
     let verb = chooseVerb()
       , situation = chooseSituation(verb)
@@ -114,7 +101,10 @@ function getRandomizedMessage() {
       return randomMessage;
 }
 
-// Generate the message
+// Get the message element in the DOM
+let randomFact = document.getElementById('fact-text'); 
+
+// Generate and display the message
 function displayMessage() {    
     let message = getStaticMessage() + " " + getRandomizedMessage();
     randomFact.textContent = message;  
@@ -124,8 +114,3 @@ function displayMessage() {
 // Add event listener to the "Get a random fact" button
 let generatorButton = document.getElementById('fact-generator');
 generatorButton.addEventListener('click', displayMessage);
-
-
-/* First sentence: 
-Stuttering has many parameters affecting its manifestation, however there is not a consensus on what stuttering is or is not. 
-*/ 

@@ -233,7 +233,7 @@ ul, li {
     padding: 1em;
     border-radius: 50%;
     border: none;
-    margin-bottom: 6rem;    
+    margin-bottom: 1rem;    
 }
 
 
@@ -248,7 +248,7 @@ nav {
 }
 
 footer {
-    display: none;
+    /* display: none; */
     text-align: center;
     background-color: hsl(var(--clr-base));
     padding: 1em 0;

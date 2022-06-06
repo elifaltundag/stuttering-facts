@@ -251,7 +251,7 @@ footer {
     /* display: none; */
     text-align: center;
     background-color: hsl(var(--clr-base));
-    padding: 3em 0;
+    padding: 2em 0 4em;
 }
 
 .nav-bar {

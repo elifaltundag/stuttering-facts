@@ -24,7 +24,6 @@ function chooseSituation(vrb) {
 
     const isSits = [
         'a speech fluency disorder',
-        'assumed to be %1 common among the population',
         'different for every stutterer',
         'based on yet to be discovered neurophysioloical reasons',
     ];
@@ -97,7 +96,8 @@ let randomFact = document.getElementById('fact-text');
 function getStaticMessage() {
     const staticMessages = [
         "Stuttering has many parameters affecting its manifestation.",
-        "There is not a consensus on what stuttering is or is not."
+        "There is not a consensus on what stuttering is or is not.",
+        "1% of the population is assummed to be stutterers."
     ];
     let staticMessage = staticMessages[Math.floor(Math.random() * staticMessages.length)]
 

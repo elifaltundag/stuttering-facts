@@ -1,5 +1,7 @@
 // RANDOM FACT GENERATOR FUNCTIONS
 
+// IMPORT 
+
 // Choose a random verb
 function chooseVerb() {
     const verbs = ['is', 'is not', 'can', 'cannot'];
@@ -37,7 +39,7 @@ function chooseSituation(vrb) {
         'be treated by singing',
         'be treated by reading outloud',
         'be learned'
-    ];
+    ]; 
     
 
     // Assign the corresponding situations
@@ -80,19 +82,19 @@ function chooseAdvice() {
 }
 
 // Get the first sentence among static messages randomly
-function getStaticMessage() {
-    const staticMessages = [
+function getFirstSent() {
+    const FirstSents = [
         "Stuttering has many parameters affecting its manifestation.",
         "There is not a consensus on what stuttering is or is not.",
         "1% of the population is assummed to be stutterers."
     ];
-    let staticMessage = staticMessages[Math.floor(Math.random() * staticMessages.length)]
+    let FirstSent = FirstSents[Math.floor(Math.random() * FirstSents.length)]
 
-    return staticMessage;
+    return FirstSent;
 }
 
 // Get a randomized message based on a template
-function getRandomizedMessage() {
+function getRandomMessage() {
     let verb = chooseVerb()
       , situation = chooseSituation(verb)
       , advice = chooseAdvice()
@@ -101,12 +103,15 @@ function getRandomizedMessage() {
       return randomMessage;
 }
 
+/* import { getFirstSent } from "./getFirstSent";
+import { getRandomMessage } from "./getRandomMessage"; */
+
 // Get the message element in the DOM
 let randomFact = document.getElementById('fact-text'); 
 
 // Generate and display the message
 function displayMessage() {    
-    let message = getStaticMessage() + " " + getRandomizedMessage();
+    let message = getFirstSent() + " " + getRandomMessage();
     randomFact.textContent = message;  
     randomFact.style.display = "inline-block";
 }

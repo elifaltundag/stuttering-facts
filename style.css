@@ -112,8 +112,7 @@ figure {
 }
 
 .flex-nav,
-.flex-main,
-.flex-footer {
+.flex-main {
     display: flex;
     flex-direction: column;
     gap: var(--gap-wide, 1rem);
@@ -154,7 +153,7 @@ h1 {
     color: hsl(var(--clr-base));
     font-size: clamp(2.3rem, calc(10vw + 0.1rem), 6rem); 
     line-height: 0.8;
-    margin: 0.4em 0;
+    margin: 1em 0 0.5em;
     width: auto;
 }
 
@@ -248,10 +247,9 @@ nav {
 }
 
 footer {
-    /* display: none; */
     text-align: center;
     background-color: hsl(var(--clr-base));
-    padding: 2em 0 4em;
+    padding: 1.5em 0;
 }
 
 .nav-bar {
@@ -310,13 +308,11 @@ footer {
     }
 
     .flex-nav,
-    .flex-main,
-    .flex-footer {
+    .flex-main {
         flex-direction: row;
     }
     
-    .flex-nav, 
-    .flex-footer {
+    .flex-nav {
         justify-content: space-between;
     }
     
@@ -329,10 +325,12 @@ footer {
     .nav-menu {
         display: none;
     }
+
     .nav-bar {
         transform: unset;
         position: sticky;
     }
+
     .nav-list,
     .languages {
         flex-direction: row;
@@ -401,4 +399,3 @@ footer {
         filter: brightness(120%) saturate(150%);
     }
 }
-

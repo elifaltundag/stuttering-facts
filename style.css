@@ -111,23 +111,13 @@ figure {
     margin: 0 auto;
 }
 
-.flex-nav,
 .flex-main {
     display: flex;
     flex-direction: column;
     gap: var(--gap-wide, 1rem);
-}
-
-.flex-nav {
-    position: relative;
     justify-content: flex-end;
+    align-items: center; 
 }
-
-.flex-main {
-    justify-content: flex-end;
-    align-items: center;    
-}
-
 
 /** A11Y - screen reader only: only for assistive technologies which read the page out loud */
 .sr-only {
@@ -163,7 +153,7 @@ h2 {
     font-size: clamp(1.3rem, calc(1.8vw + 1rem), 1.6rem);
 }
 
-h3 {
+.credits {
     font-family: var(--ff-subtitle);
     font-weight: 200;
     font-size: clamp(1rem, calc(1.5vw + 0.8rem), 1.2rem);
@@ -179,12 +169,6 @@ button {
     font-size: clamp(1.3rem, calc(1.8vw + 0.1rem), 2.2rem);
 }
 
-ul, li {
-    list-style: none;
-    font-family: var(--ff-subtitle);
-    font-size: clamp(1.3rem, calc(1.8vw + 1rem), 1.6rem);
-}
-
 .enlarge {
     font-size: 1.8em;
 }
@@ -192,14 +176,14 @@ ul, li {
 /*! -------------------- */
 /*! COMPONENTS           */
 /*! -------------------- */
-.link, .link:link {
+.a, .a:link {
     text-decoration: none;
     position: relative;
     color: hsla(var(--clr-light), var(--opac-text));
 }
 
 
-.link::after {
+.a::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -211,16 +195,6 @@ ul, li {
     transform: scaleX(1);
     transition: transform 200ms ease;
 }
-
-.sm-link {
-    position: relative;
-}
-
-.sm-link::before {
-    content: "";
-    position: absolute;
-}
-
 
 #fact-generator {
     cursor: pointer;
@@ -240,53 +214,42 @@ ul, li {
 /*! -------------------- */
 /*! SECTIONS             */
 /*! -------------------- */
-
 /** Display */ 
-nav {
-    display: none;
-}
-
 footer {
     text-align: center;
     background-color: hsl(var(--clr-base));
     padding: 1.5em 0;
 }
 
-.nav-bar {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: auto;
-    background-color: hsl(var(--clr-base));
-    padding: 1em 0;
-    transform: translateY(-100%);
-}
-
-.nav-list,
-.languages {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: var(--gap-narrow);
-}
-
 #fact-text {
-    display: none; 
     background-color: hsla(var(--clr-base), 0.6);
     padding: 1em;
     margin-top: 0.8em;
     border-radius: 0.5em;
     flex-grow: 5;   
+    width: 100%;
 }
 
-.sm-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--gap-narrow);
+/*! -------------------- */
+/*! STATES               */
+/*! -------------------- */
+#fact-text {
+    transform-origin: top;
+    transition: transform 400ms ease;
 }
+
+#fact-text[data-state="initial"] {
+    opacity: 0;
+    transform: scaleY(0%);
+}
+
+#fact-text[data-state="expanded"] {
+    opacity: 1;
+    transform: scaleY(100%);
+}
+
+
+
 
 
 
@@ -294,69 +257,35 @@ footer {
 /*! MEDIA QUERIES        */
 /*! -------------------- */
 
-@media screen and (min-width: 800px) {
-    nav {
-        display: block !important;
-    }
-    
+@media screen and (min-width: 800px) {    
     footer {
         display: block !important;
     }
 
     .container {
         width: min(90%, 1200px);
-    }
-
-    .flex-nav,
+    }  
+    
     .flex-main {
         flex-direction: row;
-    }
-    
-    .flex-nav {
-        justify-content: space-between;
-    }
-    
-    .flex-main {
         justify-content: center;
         gap: 3em;
         margin-bottom: 2em;
     }
 
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-bar {
-        transform: unset;
-        position: sticky;
-    }
-
-    .nav-list,
-    .languages {
-        flex-direction: row;
-        justify-content: center;
-    }
-
     #fact-generator {
         margin-bottom: 0;
+        position: relative;
     }
     
-    .sm-list {
-        justify-content: flex-start;
+    #fact-generator[data-position="is-pushing"] {
+        transform: translateX(100%);
     }
-
-    .social-media {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap);
+    
+    #fact-generator[data-position="pushed"] {
+        transform: translateX(0%);
     }
-    .creators {
-        text-align: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+    
 }
 
 
@@ -366,23 +295,23 @@ footer {
 /*! -------------------- */
 
 @media (hover) {    
-    .link {
+    a {
         filter: brightness(100%);
         transition: filter var(--dur-link) ease;
     }
 
-    .link::after{
+    a::after{
         transform-origin: left;
         transform: scaleX(0);
         
         transition: transform var(--dur-link) ease;
     }
 
-    .link:hover {
+    a:hover {
         filter: brightness(150%);
     }
     
-    .link:hover::after {
+    a:hover::after {
         transform: scaleX(1);
 
     }

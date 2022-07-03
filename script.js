@@ -113,7 +113,6 @@ let randomFact = document.getElementById('fact-text');
 function displayMessage() {    
     let message = getFirstSent() + " " + getRandomMessage();
     randomFact.textContent = message;  
-    randomFact.style.display = "inline-block";
 }
 
 // Add event listener to the "Get a random fact" button

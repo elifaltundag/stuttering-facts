@@ -278,14 +278,6 @@ footer {
         position: relative;
     }
     
-    #fact-generator[data-position="is-pushing"] {
-        transform: translateX(100%);
-    }
-    
-    #fact-generator[data-position="pushed"] {
-        transform: translateX(0%);
-    }
-    
 }
 
 
